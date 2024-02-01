@@ -1,0 +1,22 @@
+# How to run the bash script
+
+    ./h1_p5-1.sh -T 10 -t 60 -X 50 -Y 60
+
+    T -> Granularity
+    t -> total time to run for
+    X -> threshold for High CPU Alert
+    Y -> threshold for Very High CPU Alert 
+
+
+# Cleaning script
+
+    The script to clean csv files is in the same file. Cleaning the csv files can be specified by an argument
+    It is to be used as follows
+
+    ./h1_p5-1.sh -C 1
+
+
+# CronJob was set as follows. Runs once a day. Cleans before running
+
+    58 23 * * * ./home/vmadm/amay/hw1/p5/h1_p5-1.sh -C 1
+    59 23 * * * /home/vmadm/amay/hw1/p5/h1_p5-1.sh -T 10 -t 60 -X 50 -Y 60

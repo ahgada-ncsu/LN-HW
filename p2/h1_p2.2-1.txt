@@ -1,0 +1,46 @@
+USING THE SCRIPT h1_p2.2_1.sh -> this output was generated (The time column indicates a 2 second delay as well)
+
+FOR METHODOLOGY, REFER THE COMMENTS IN THE SCRIPT
+
+===========================================================================================
+
+top - 00:39:19 up 3 days, 12:13,  8 users,  load average: 0.04, 0.01, 0.00
+Tasks: 135 total,   1 running, 134 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us, 33.3 sy,  0.0 ni, 66.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :  24050.2 total,  21691.5 free,    660.4 used,   1944.1 buff/cache     
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.  23389.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  21095 vmadm     20   0  983584 122620  42368 S   0.0   0.5   1:18.27 node
+  51942 vmadm     20   0  974792 100728  41216 S   0.0   0.4   0:10.90 node
+  21170 vmadm     20   0  930600  76524  39424 S   0.0   0.3   1:10.13 node
+  48936 vmadm     20   0  718388  52628  38784 S   0.0   0.2   0:01.14 node
+
+top - 00:39:22 up 3 days, 12:13,  8 users,  load average: 0.04, 0.01, 0.00
+Tasks: 135 total,   1 running, 134 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :  24050.2 total,  21687.6 free,    664.3 used,   1944.1 buff/cache     
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.  23385.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  21095 vmadm     20   0  983584 122748  42368 S   0.0   0.5   1:18.27 node
+  51942 vmadm     20   0  974792 100856  41216 S   0.0   0.4   0:10.92 node
+  21170 vmadm     20   0  930600  76652  39424 S   0.0   0.3   1:10.15 node
+  48936 vmadm     20   0  718388  52628  38784 S   0.0   0.2   0:01.14 node
+
+top - 00:39:26 up 3 days, 12:13,  8 users,  load average: 0.04, 0.01, 0.00
+Tasks: 135 total,   1 running, 134 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us, 33.3 sy,  0.0 ni, 66.7 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+MiB Mem :  24050.2 total,  21693.2 free,    658.6 used,   1944.1 buff/cache     
+MiB Swap:      0.0 total,      0.0 free,      0.0 used.  23391.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  21095 vmadm     20   0  983584 122748  42368 S   0.0   0.5   1:18.28 node
+  51942 vmadm     20   0  974792 100856  41216 S   0.0   0.4   0:10.92 node
+  21170 vmadm     20   0  930600  76908  39424 S   0.0   0.3   1:10.18 node
+  48936 vmadm     20   0  718388  52628  38784 S   0.0   0.2   0:01.14 node
+
+
+================================================================================================
+
+Memory usage doesn't change much. The process which is most memory intensive right now is PID 21095

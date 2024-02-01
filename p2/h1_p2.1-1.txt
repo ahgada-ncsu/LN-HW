@@ -1,0 +1,42 @@
+HOW TO INTERPRET RESULTS
+
+us: This is the percentage of time spent in user space, meaning the CPU was executing user-initiated processes.
+sy: This is the percentage of time spent in kernel space, meaning the CPU was handling system tasks for the operating system itself.
+ni: This is the percentage of time spent running processes with lowered priority (nice value).
+id: This is the most important value here. It shows the percentage of time CPU 2 was idle, meaning it wasn't actively performing any tasks. This is the percentage of time the CPU spent waiting for>
+hi: This is the percentage of time spent servicing hardware interrupts.
+si: This is the percentage of time spent servicing software interrupts.
+st: This is the percentage of time spent in involuntary wait due to the hypervisor managing other virtual CPUs or due to stolen CPU time in a virtual machine environment.
+
+============================================================
+
+Step 1: save the configuration of top to give all cpu inforation by default -> [top -> press 1 -> press W -> press enter]
+
+
+top -n3 -d2 | grep "Cpu"
+
+%Cpu0  :  0.0 us,100.0 sy,  0.0 ni,  0.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+%Cpu1  :  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+%Cpu2  :  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+%Cpu3  :  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+
+%Cpu0  :  0.9 us,  0.9 sy,  0.0 ni, 98.1 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+%Cpu1  :  0.0 us,  0.9 sy,  0.0 ni, 99.1 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+%Cpu2  :  0.9 us,  0.9 sy,  0.0 ni, 98.1 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+%Cpu3  :  0.0 us,  1.4 sy,  0.0 ni, 98.6 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+
+%Cpu0  :  0.0 us,  1.0 sy,  0.0 ni, 99.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+%Cpu1  :  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+%Cpu2  :  0.0 us,  0.5 sy,  0.0 ni, 99.5 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+%Cpu3  :  0.0 us,  0.0 sy,  0.0 ni,100.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+
+==============================================================
+
+
+We will define which CPU was the least used by comparing their idle time (id)
+
+1st report -> all CPUs idle except CPU 0
+2nd report -> CPU 1 most idle (99.1%)
+3rd report -> CPU 1 and CPU 3 least idle (100%)
+
+CPU 1 is idle in all of them -> LEAST IDLE

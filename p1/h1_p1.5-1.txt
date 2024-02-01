@@ -1,0 +1,12 @@
+free -h
+
+               total        used        free      shared  buff/cache   available
+Mem:            23Gi       609Mi        21Gi       492Ki       1.9Gi        22Gi
+Swap:             0B          0B          0B
+
+========================================================================================
+
+Total Memory:      23 GB
+Available memory:  22 GB
+Free memory:       21 GB
+

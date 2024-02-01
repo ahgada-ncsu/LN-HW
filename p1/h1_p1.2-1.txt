@@ -1,0 +1,21 @@
+ROUTING TABLE CONTENTS
+
+Command: sudo ip route show
+
+
+OUTPUT
+
+default via 192.168.38.1 dev eth0 proto dhcp src 192.168.38.2 metric 100 
+192.168.38.0/24 dev eth0 proto kernel scope link src 192.168.38.2 metric 100 
+192.168.38.1 dev eth0 proto dhcp scope link src 192.168.38.2 metric 100 
+
+
+=======================================================
+
+OUTPUT INTERFACE FOR THE ROUTE TO 8.8.8.8
+
+sudo ip route get to 8.8.8.8
+
+8.8.8.8 via 192.168.38.1 dev eth0 src 192.168.38.2 uid 0 cache
+
+(Route to gateway of the network -> Will be forwarded from the gateway ... )

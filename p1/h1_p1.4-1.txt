@@ -1,0 +1,27 @@
+sudo dhclient -v
+
+Internet Systems Consortium DHCP Client 4.4.3-P1
+Copyright 2004-2022 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+
+Listening on LPF/br0/52:54:00:39:38:02
+Sending on   LPF/br0/52:54:00:39:38:02
+Listening on LPF/eth1/52:54:00:39:38:02
+Sending on   LPF/eth1/52:54:00:39:38:02
+Listening on LPF/eth0/52:54:00:38:38:02
+Sending on   LPF/eth0/52:54:00:38:38:02
+Sending on   Socket/fallback
+xid: warning: no netdev with useable HWADDR found for seed's uniqueness enforcement
+xid: rand init seed (0x65c9aa95) built using gethostid
+DHCPDISCOVER on br0 to 255.255.255.255 port 67 interval 3 (xid=0x466dac67)
+DHCPDISCOVER on eth1 to 255.255.255.255 port 67 interval 3 (xid=0x67b22457)
+DHCPREQUEST for 192.168.38.2 on eth0 to 255.255.255.255 port 67 (xid=0x2e54678)
+DHCPACK of 192.168.38.2 from 192.168.38.1 (xid=0x7846e502)
+RTNETLINK answers: File exists
+bound to 192.168.38.2 -- renewal in 1473 seconds.
+
+
+=============================================
+
+DHCP server seems to be at the gateway: 192.168.38.1
