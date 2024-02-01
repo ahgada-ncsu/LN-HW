@@ -18,5 +18,8 @@
 
 # CronJob was set as follows. Runs once a day. Cleans before running
 
-    58 23 * * * ./home/vmadm/amay/hw1/p5/h1_p5-1.sh -C 1
-    59 23 * * * /home/vmadm/amay/hw1/p5/h1_p5-1.sh -T 10 -t 60 -X 50 -Y 60
+    58 23 * * * /home/vmadm/amay/hw1/p5/h1_p5-1.sh -C 1
+    59 23 * * * /home/vmadm/amay/hw1/p5/h1_p5-1.sh -T 30 -t 86400 -X 6 -Y 10
+
+
+NOTE THAT ALL THE CPU AVERAGES ARE NOT NORMALIZED OVER THE 4 CPU CORES. THE MAN PAGE FOR uptime SPECIFIES THAT.
