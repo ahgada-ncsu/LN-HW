@@ -3,7 +3,7 @@
     ./h1_p5-1.sh -T 10 -t 60 -X 50 -Y 60
 
     T -> Granularity
-    t -> total time to run for
+    t -> total time to run for (Tp)
     X -> threshold for High CPU Alert
     Y -> threshold for Very High CPU Alert 
 
