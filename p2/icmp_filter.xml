@@ -1,0 +1,5 @@
+<filter name='icmp_filter' chain='root'>
+  <rule action='drop' direction='out' priority='500'>
+    <icmp dstipaddr='8.8.8.8'/>
+  </rule>
+</filter>

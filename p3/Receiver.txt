@@ -1,0 +1,104 @@
+root@Team1-Guest-VM1:~/.ssh# iperf3 -s
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 192.168.121.3, port 58794
+[  5] local 192.168.121.2 port 5201 connected to 192.168.121.3 port 33040
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-1.00   sec  77.8 MBytes   653 Mbits/sec  0.061 ms  65472/145145 (45%)  
+[  5]   1.00-2.00   sec  78.6 MBytes   659 Mbits/sec  0.002 ms  64935/145429 (45%)  
+[  5]   2.00-3.00   sec  83.0 MBytes   696 Mbits/sec  0.007 ms  59566/144565 (41%)  
+[  5]   3.00-4.00   sec  85.5 MBytes   717 Mbits/sec  0.010 ms  70962/158520 (45%)  
+[  5]   4.00-5.00   sec  83.5 MBytes   700 Mbits/sec  0.016 ms  75719/161200 (47%)  
+[  5]   5.00-6.00   sec  87.2 MBytes   731 Mbits/sec  0.031 ms  64903/154194 (42%)  
+[  5]   6.00-7.00   sec  80.4 MBytes   672 Mbits/sec  0.357 ms  78290/160580 (49%)  
+[  5]   7.00-8.00   sec  78.5 MBytes   661 Mbits/sec  0.008 ms  56188/136578 (41%)  
+[  5]   8.00-9.00   sec  90.6 MBytes   760 Mbits/sec  0.012 ms  64110/156845 (41%)  
+[  5]   9.00-10.00  sec  90.1 MBytes   756 Mbits/sec  0.010 ms  64204/156498 (41%)  
+[  5]  10.00-10.04  sec  3.78 MBytes   788 Mbits/sec  0.012 ms  2325/6196 (38%)  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-10.04  sec   839 MBytes   701 Mbits/sec  0.012 ms  666674/1525750 (44%)  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 192.168.121.3, port 33784
+[  5] local 192.168.121.2 port 5201 connected to 192.168.121.3 port 48111
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-1.00   sec   112 MBytes   944 Mbits/sec  0.008 ms  14540/72140 (20%)  
+[  5]   1.00-2.00   sec   126 MBytes  1.05 Gbits/sec  0.107 ms  8059/72353 (11%)  
+[  5]   2.00-3.00   sec   118 MBytes   991 Mbits/sec  0.031 ms  12767/73273 (17%)  
+[  5]   3.00-4.00   sec   124 MBytes  1.04 Gbits/sec  0.013 ms  12719/76325 (17%)  
+[  5]   4.00-5.00   sec   122 MBytes  1.02 Gbits/sec  0.053 ms  11716/74181 (16%)  
+[  5]   5.00-6.00   sec   111 MBytes   932 Mbits/sec  0.176 ms  7387/64290 (11%)  
+[  5]   6.00-7.00   sec   118 MBytes   986 Mbits/sec  0.066 ms  12554/72869 (17%)  
+[  5]   7.00-8.00   sec   124 MBytes  1.04 Gbits/sec  0.024 ms  14683/77950 (19%)  
+[  5]   8.00-9.00   sec   124 MBytes  1.04 Gbits/sec  0.023 ms  14355/78025 (18%)  
+[  5]   9.00-10.00  sec   127 MBytes  1.06 Gbits/sec  0.033 ms  13949/78861 (18%)  
+[  5]  10.00-10.04  sec  4.63 MBytes  1.01 Gbits/sec  0.023 ms  818/3190 (26%)  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-10.04  sec  1.18 GBytes  1.01 Gbits/sec  0.023 ms  123547/743457 (17%)  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 192.168.121.3, port 57450
+[  5] local 192.168.121.2 port 5201 connected to 192.168.121.3 port 49848
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-1.00   sec   167 MBytes  1.40 Gbits/sec  0.309 ms  1476/44291 (3.3%)  
+[  5]   1.00-2.00   sec   192 MBytes  1.62 Gbits/sec  0.097 ms  514/49759 (1%)  
+[  5]   2.00-3.00   sec   204 MBytes  1.72 Gbits/sec  0.039 ms  697/53033 (1.3%)  
+[  5]   3.00-4.00   sec   205 MBytes  1.72 Gbits/sec  0.028 ms  250/52714 (0.47%)  
+[  5]   4.00-5.00   sec   206 MBytes  1.73 Gbits/sec  0.021 ms  294/52945 (0.56%)  
+[  5]   5.00-6.00   sec   183 MBytes  1.54 Gbits/sec  0.042 ms  724/47584 (1.5%)  
+[  5]   6.00-7.00   sec   183 MBytes  1.54 Gbits/sec  0.035 ms  3730/50648 (7.4%)  
+[  5]   7.00-8.00   sec   182 MBytes  1.52 Gbits/sec  0.006 ms  530/47044 (1.1%)  
+[  5]   8.00-9.00   sec   191 MBytes  1.60 Gbits/sec  0.019 ms  218/49153 (0.44%)  
+[  5]   9.00-10.00  sec   192 MBytes  1.61 Gbits/sec  0.018 ms  600/49750 (1.2%)  
+[  5]  10.00-10.04  sec  8.58 MBytes  1.73 Gbits/sec  0.013 ms  2/2199 (0.091%)  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-10.04  sec  1.87 GBytes  1.60 Gbits/sec  0.013 ms  9035/499120 (1.8%)  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 192.168.121.3, port 35432
+[  5] local 192.168.121.2 port 5201 connected to 192.168.121.3 port 40774
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-1.00   sec   170 MBytes  1.43 Gbits/sec  0.036 ms  1197/22971 (5.2%)  
+[  5]   1.00-2.00   sec   195 MBytes  1.64 Gbits/sec  0.038 ms  644/25640 (2.5%)  
+[  5]   2.00-3.00   sec   204 MBytes  1.71 Gbits/sec  0.026 ms  165/26256 (0.63%)  
+[  5]   3.00-4.00   sec   205 MBytes  1.72 Gbits/sec  0.037 ms  14/26300 (0.053%)  
+[  5]   4.00-5.00   sec   214 MBytes  1.80 Gbits/sec  0.048 ms  368/27797 (1.3%)  
+[  5]   5.00-6.00   sec   183 MBytes  1.53 Gbits/sec  0.238 ms  358/23780 (1.5%)  
+[  5]   6.00-7.00   sec   187 MBytes  1.57 Gbits/sec  0.023 ms  446/24334 (1.8%)  
+[  5]   7.00-8.00   sec   205 MBytes  1.72 Gbits/sec  0.028 ms  206/26475 (0.78%)  
+[  5]   8.00-9.00   sec   206 MBytes  1.73 Gbits/sec  0.032 ms  87/26417 (0.33%)  
+[  5]   9.00-10.00  sec   207 MBytes  1.74 Gbits/sec  0.042 ms  48/26531 (0.18%)  
+[  5]  10.00-10.04  sec  6.90 MBytes  1.32 Gbits/sec  0.012 ms  136/1019 (13%)  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-10.04  sec  1.94 GBytes  1.66 Gbits/sec  0.012 ms  3669/257520 (1.4%)  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 192.168.121.3, port 38014
+[  5] local 192.168.121.2 port 5201 connected to 192.168.121.3 port 38370
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-1.00   sec   194 MBytes  1.63 Gbits/sec  0.107 ms  111/12511 (0.89%)  
+[  5]   1.00-2.00   sec   205 MBytes  1.72 Gbits/sec  0.038 ms  255/13352 (1.9%)  
+[  5]   2.00-3.00   sec   206 MBytes  1.73 Gbits/sec  0.065 ms  120/13333 (0.9%)  
+[  5]   3.00-4.00   sec   230 MBytes  1.93 Gbits/sec  0.060 ms  28/14760 (0.19%)  
+[  5]   4.00-5.00   sec   241 MBytes  2.03 Gbits/sec  0.065 ms  224/15679 (1.4%)  
+[  5]   5.00-6.00   sec   226 MBytes  1.90 Gbits/sec  0.048 ms  113/14595 (0.77%)  
+[  5]   6.00-7.00   sec   206 MBytes  1.73 Gbits/sec  0.070 ms  394/13575 (2.9%)  
+[  5]   7.00-8.00   sec   189 MBytes  1.59 Gbits/sec  0.059 ms  200/12313 (1.6%)  
+[  5]   8.00-9.00   sec   223 MBytes  1.87 Gbits/sec  0.071 ms  41/14306 (0.29%)  
+[  5]   9.00-10.00  sec   223 MBytes  1.87 Gbits/sec  0.058 ms  11/14261 (0.077%)  
+[  5]  10.00-10.04  sec  9.72 MBytes  1.85 Gbits/sec  0.051 ms  0/622 (0%)  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  5]   0.00-10.04  sec  2.10 GBytes  1.80 Gbits/sec  0.051 ms  1497/139307 (1.1%)  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------

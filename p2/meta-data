@@ -1,0 +1,3 @@
+#cloud-config
+instance_id: test
+local-hostname: test

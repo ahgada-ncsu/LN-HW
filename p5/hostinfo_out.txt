@@ -1,0 +1,14 @@
+
+
+hostname:  lnVM02
+
+Number of domains in the host: 4
+
+CPU Model:  x86_64
+Memory size in Megabytes:  24050
+Number of active CPUs:  4
+Expected CPU frequency:  2194
+
+Hypervisor type: QEMU
+
+Free Memory in Host:  2149183488

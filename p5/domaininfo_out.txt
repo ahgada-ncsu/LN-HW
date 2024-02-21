@@ -1,0 +1,49 @@
+Guest Domains in the host
+    UUID:  42c1485f-78bc-4d00-83ed-d534ffec550e
+    Name:  1-Guest-VM1
+    State:  The state is VIR_DOMAIN_RUNNING
+    Num CPUs:  1
+    Max Memory (Bytes):  1048576
+
+    UUID:  2499201f-f6df-4d88-91a0-1d338c03f9ea
+    Name:  vm1-1-clone
+    State:  The state is VIR_DOMAIN_SHUTOFF
+    Num CPUs: None [Not running]
+    Max Memory (Bytes):  1048576
+
+    UUID:  365ec729-6a39-4680-9da3-271a309f46cc
+    Name:  vm1-1-megh
+    State:  The state is VIR_DOMAIN_SHUTOFF
+    Num CPUs: None [Not running]
+    Max Memory (Bytes):  1048576
+
+    UUID:  8b40671b-e2cd-4d4b-83cc-71d9e44c537b
+    Name:  1-Guest-VM2
+    State:  The state is VIR_DOMAIN_SHUTOFF
+    Num CPUs: None [Not running]
+    Max Memory (Bytes):  1048576
+
+    UUID:  30350145-37b1-40d3-a578-4d72811314a2
+    Name:  Team1-Guest-VM2
+    State:  The state is VIR_DOMAIN_RUNNING
+    Num CPUs:  1
+    Max Memory (Bytes):  1048576
+
+    UUID:  f0ff91c5-a4d5-4f5b-97e8-787b91a495dc
+    Name:  Team1-Guest-VM1
+    State:  The state is VIR_DOMAIN_RUNNING
+    Num CPUs:  1
+    Max Memory (Bytes):  1048576
+
+    UUID:  b37fd41e-3bcd-4714-a96d-e4bb515807ed
+    Name:  1-Guest-VM3
+    State:  The state is VIR_DOMAIN_RUNNING
+    Num CPUs:  1
+    Max Memory (Bytes):  1048576
+
+    UUID:  75ebbf91-436e-4478-a7eb-4514ccdff2e5
+    Name:  vm1-1
+    State:  The state is VIR_DOMAIN_SHUTOFF
+    Num CPUs: None [Not running]
+    Max Memory (Bytes):  1048576
+
