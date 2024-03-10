@@ -1,0 +1,67 @@
+- name: Create networks for OVS Switches
+  hosts: localhost
+  gather_facts: yes
+  become: true
+  vars:
+    networks:
+      - network_name: L2
+        bridge_name: Sw2
+        mode: bridge
+        mac: "none"
+        ip: "none"
+        ip_wm: "none"
+        netmask: "none"
+        dhcp_start: "none"
+        dhcp_end: "none"
+
+      - network_name: L3
+        bridge_name: Sw3
+        mode: bridge
+        mac: "52:54:00:02:98:d8"
+        ip: "191.168.122.1"
+        ip_wm: "191.168.122.1/24"
+        netmask: "255.255.255.0"
+        dhcp_start: "191.168.122.2"
+        dhcp_end: "191.168.122.254"
+      
+      - network_name: Internet
+        bridge_name: Sw1
+        mode: bridge
+        mac: "52:54:00:04:99:d8"
+        ip: "191.168.121.1"
+        ip_wm: "191.168.121.1/24"
+        netmask: "255.255.255.0"
+        dhcp_start: "191.168.121.2"
+        dhcp_end: "191.168.121.254"
+
+      - network_name: Other
+        bridge_name: Sw4
+        mode: bridge
+        mac: "52:54:00:02:98:d3"
+        ip: "191.168.120.1"
+        ip_wm: "191.168.120.1/24"
+        netmask: "255.255.255.0"
+        dhcp_start: "191.168.120.2"
+        dhcp_end: "191.168.120.254"
+  
+  tasks:
+    - name: Instal LXML
+      apt: 
+        name: python3-lxml 
+        state: present
+      become: true
+
+    - name: network_define
+      include_role: 
+        name: "./libvirt_network"
+      vars:
+        network_name: "{{ item.network_name }}"
+        bridge_name: "{{ item.bridge_name }}"
+        mode: "{{ item.mode }}"
+        mac: "{{ item.mac }}"
+        ip: "{{ item.ip }}"
+        netmask: "{{ item.netmask }}"
+        dhcp_start: "{{ item.dhcp_start }}"
+        dhcp_end: "{{ item.dhcp_end }}"
+        ip_wm: "{{ item.ip_wm }}"
+      with_items: "{{ networks }}"

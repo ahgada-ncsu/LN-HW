@@ -1,0 +1,29 @@
+---
+- name: Create OVS switches
+  hosts: all
+  gather_facts: yes
+  become: no
+
+  tasks:
+    - name: Install Open vSwitch package
+      apt:
+        name: openvswitch-switch
+        state: present
+  
+    - name: create OVS bridge
+      openvswitch.openvswitch.openvswitch_bridge:
+        bridge: "{{ item }}"
+        state: present
+      loop:
+        - Sw1
+        - Sw2
+        - Sw3
+        - Sw4
+    
+    - name: Set IP links to Up for the created bridges
+      shell: ip link set {{ item }} up
+      loop:
+        - Sw1
+        - Sw2
+        - Sw3
+        - Sw4

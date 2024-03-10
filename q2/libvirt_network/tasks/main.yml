@@ -1,0 +1,42 @@
+---
+# tasks file for libvirt_network
+- name: Create Bridged network using template file
+  community.libvirt.virt_net:
+    command: define
+    name: "{{ network_name }}"
+    xml: '{{ lookup("template", "bridge_mode.xml.j2") }}'
+  when: net_md == "bridge"
+  vars:
+    net_md: "{{ mode }}"
+
+- name: Create Routed network using template file
+  community.libvirt.virt_net:
+    command: define
+    name: "{{ network_name }}"
+    xml: '{{ lookup("template", "route_mode.xml.j2") }}'
+  when: net_md == "route"
+  vars:
+    net_md: "{{ mode }}"
+  
+- name: Create NAT network using template file
+  community.libvirt.virt_net:
+    command: define
+    name: "{{ network_name }}"
+    xml: '{{ lookup("template", "nat_mode.xml.j2") }}'
+  when: net_md == "nat"
+  vars:
+    net_md: "{{ mode }}"
+
+- name: Ensure that network is active
+  community.libvirt.virt_net:
+    command: start
+    name: "{{ network_name }}"
+  become: true
+
+- name: assign IP to interfaces
+  command:
+    ip addr add {{ ip_wm }} dev {{ bridge_name }}
+  become: true
+  when: ip != "none"
+  vars:
+    ip: "{{ ip }}" 

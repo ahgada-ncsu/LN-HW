@@ -1,0 +1,66 @@
+---
+- name: Install Requirements
+  apt:
+    name: 
+      - qemu-kvm
+      - libvirt-daemon-system
+      - libvirt-clients
+      - virtinst
+    state: present
+  become: true
+
+  
+- name: Check if image exists, otherwise download
+  block:
+    - name: Check if image exists
+      stat:
+        path: "{{ libvirt_pool_dir }}/{{ base_image_name }}"
+      register: file_stat
+    - name: Download file if doesn't exist
+      when: not file_stat.stat.exists
+      block:
+        - name: Download file
+          get_url:
+            url: "{{ base_image_url }}"
+            dest: "{{ libvirt_pool_dir }}"
+  become: true
+
+
+- name: Create the folders for VMs
+  file:
+    path: "{{ libvirt_pool_dir }}/{{ vm_name }}"
+    state: directory
+    mode: '0755'
+  become: true
+
+
+- name: Create the disk image for the VM
+  command:
+    qemu-img create -f qcow2 -F qcow2 -o backing_file={{ libvirt_pool_dir }}/{{ base_image_name }} {{ libvirt_pool_dir }}/{{ vm_name }}/{{ vm_name }}.qcow2
+  become: true
+  register: qcow_disk_output
+
+- name: Configure the disk image 
+  command:
+    virt-customize -v -a {{ libvirt_pool_dir }}/{{ vm_name }}/{{ vm_name }}.qcow2 \
+    --hostname {{ vm_name }} \
+    --root-password password:{{ vm_root_pass }} \
+    --ssh-inject 'root:file:{{ ssh_key }}'
+    --firstboot-command "bash -c 'sudo ip link set enp1s0 up && sudo ip link set enp7s0 up && dhclient enp1s0 && sudo echo nameserver 8.8.8.8 > /etc/resolv.conf && sudo apt update && sudo apt upgrade && sudo apt install -y iper3 -y && sudo apt install -y wireshark'"
+  when: qcow_disk_output is changed
+  become: true
+
+- name: Set VM disk size
+  command:
+    qemu-img resize {{ libvirt_pool_dir }}/{{ vm_name }}/{{ vm_name }}.qcow2 {{ vm_disk_size_G }}G
+  become: true
+
+- name: define VM
+  community.libvirt.virt:
+    command: define
+    xml: "{{ lookup('template', 'vm-template.xml.j2') }}"
+
+- name: start_vm
+  community.libvirt.virt:
+    command: start
+    name: "{{ vm_name }}"

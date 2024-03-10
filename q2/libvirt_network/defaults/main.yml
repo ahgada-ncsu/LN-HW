@@ -1,0 +1,11 @@
+---
+# defaults file for libvirt_network
+mode: mode
+network_name: net
+bridge_name: br
+ip: ip
+mac: mac
+netmask: netmask
+dhcp_start: dhcp_start
+dhcp_end: dhcp_end
+ip_wm: ip_wm

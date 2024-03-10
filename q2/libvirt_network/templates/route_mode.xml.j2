@@ -1,0 +1,11 @@
+<network>
+<name>{{ network_name }}</name>
+  <forward mode='route'/>
+  <bridge name='{{ bridge_name }}' stp='on' delay='0'/>
+  <mac address='{{ mac }}'/>
+  <ip address='{{ ip }}' netmask='{{ netmask }}'>
+    <dhcp>
+      <range start='{{ dhcp_start }}' end='{{ dhcp_end }}'/>
+    </dhcp>
+  </ip>
+</network>

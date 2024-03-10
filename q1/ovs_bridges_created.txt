@@ -1,0 +1,24 @@
+6810ccfa-0a68-4f9b-815b-2a727c295348
+    Bridge team01-netl3
+        Port team01-netl3
+            Interface team01-netl3
+                type: internal
+        Port vnet273
+            Interface vnet273
+    Bridge Sw3
+        Port Sw3
+            Interface Sw3
+                type: internal
+    Bridge Sw1
+        Port Sw1
+            Interface Sw1
+                type: internal
+    Bridge Sw4
+        Port Sw4
+            Interface Sw4
+                type: internal
+    Bridge Sw2
+        Port Sw2
+            Interface Sw2
+                type: internal
+    ovs_version: "3.1.3"

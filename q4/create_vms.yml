@@ -1,0 +1,27 @@
+
+---
+- name: Deploys VM
+  hosts: localhost
+  gather_facts: yes
+  become: true
+  vars:
+    vms:
+      - vm: Automated_VM2
+        vcpus: 2
+        ram_mb: 2048
+        ssh_pub_key: /home/vmadm/.ssh/id_rsa.pub
+        disk_size: 12
+
+
+  tasks:
+    - name: kvm_provision
+      include_role:
+        name: "./kvm_provision"
+      vars:
+        vm_name: "{{ item.vm }}"
+        vm_vcpus: "{{ item.vcpus }}"
+        vm_ram_mb: "{{ item.ram_mb }}"
+        ssh_key: "{{ item.ssh_pub_key }}"
+        vm_disk_size_G: "{{ item.disk_size }}"
+      with_items: "{{ vms }}"
+  
